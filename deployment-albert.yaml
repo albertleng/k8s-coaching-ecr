@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: albert-app
-          image: 255945442255.dkr.ecr.us-east-1.amazonaws.com/albert-ecr-repository:latest
+          image: <AWS-ACCOUNT-ID>.dkr.ecr.<AWS-REGION>.amazonaws.com/albert-ecr-repository:latest # Replace with your 'AWS ACCOUNT ID' and 'AWS REGION'
           ports:
             - containerPort: 80
       imagePullSecrets:
