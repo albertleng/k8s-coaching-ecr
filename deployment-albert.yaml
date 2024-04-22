@@ -1,0 +1,21 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: albert-app-deployment
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: albert-app
+  template:
+    metadata:
+      labels:
+        app: albert-app
+    spec:
+      containers:
+        - name: albert-app
+          image: 255945442255.dkr.ecr.us-east-1.amazonaws.com/albert-ecr-repository:latest
+          ports:
+            - containerPort: 80
+      imagePullSecrets:
+        - name: regcred
